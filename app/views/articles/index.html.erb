@@ -1,6 +1,19 @@
-<h3><%= link_to 'New Article', new_article_path %></h3>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+  <div class="navbar-header">
+    <p> Wikinimous</p>
+  </div>
+  <p class="nav-item"><%= link_to 'New Article', new_article_path %></p>
+  </div>
+</nav>
 
-<% @articles.each do |article| %>
-<h1><%= link_to article.title, article_path(article) %></h1>
-<p><%= article.content %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <% @articles.each do |article| %>
+      <h1><%= link_to article.title, article_path(article) %></h1>
+      <p><%= article.content %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
